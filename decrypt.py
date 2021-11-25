@@ -1,6 +1,10 @@
-key=input()
-input=open("encryptare.bin", 'r')
-output=open("decryptare.txt", 'w')
+import sys
+
+sys_args = sys.argv
+
+key = sys_args[2]
+input=open(sys_args[1], 'r')
+output=open(sys_args[3], 'w')
 decryption=[]
 i=0
 while bin:
@@ -18,3 +22,4 @@ decryption.pop()
 decryption=''.join(decryption)
 output.write(decryption)
 output.close()
+

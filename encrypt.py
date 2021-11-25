@@ -3,7 +3,6 @@ import sys
 
 
 sys_args = sys.argv
-print(sys.argv)
 
 key=sys_args[1]
 input=open(sys_args[2], 'r')

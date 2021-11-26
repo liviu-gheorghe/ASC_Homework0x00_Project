@@ -1,6 +1,6 @@
 import sys
-key=sys.argv[1]
-fisierin=sys.argv[2]
+key=sys.argv[2]
+fisierin=sys.argv[1]
 fisierout=sys.argv[3]
 input=open(fisierin, 'r+b')
 output=open(fisierout, 'w', encoding='utf-8')

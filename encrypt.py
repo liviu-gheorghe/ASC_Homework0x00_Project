@@ -1,14 +1,16 @@
 import sys
-
-
-
-sys_args = sys.argv
-
-key=sys_args[1]
-input=open(sys_args[2], 'r')
+key=sys.argv[1]
+fisierin=sys.argv[2]
+fisierout=sys.argv[3]
+input=open(fisierin, 'r', encoding='utf-8')
 text=input.read()
-input.close()
-output=open(sys_args[3], 'w')
+coduri=[]
 for i in range(len(text)):
-    output.write(bin(ord(text[i])^ord(key[i%len(key)]))[2:].zfill(8))
+    coduri.append(ord(text[i]))
+input.close()
+for i in range(len(coduri)):
+    coduri[i]=coduri[i]^ord(key[i%len(key)])
+output=open(fisierout, 'w+b')
+coduri=bytearray(coduri)
+output.write(coduri)
 output.close()

@@ -2,14 +2,15 @@ import sys
 key=sys.argv[1]
 fisierin=sys.argv[2]
 fisierout=sys.argv[3]
-input=open(fisierin, 'r', encoding='utf-8')
-text=input.read()
+input=open(fisierin, 'rb')
 coduri=[]
-for i in range(len(text)):
-    coduri.append(ord(text[i]))
+i = 0
+while byte := input.read(1):
+    enc_byte = ord(byte)
+    enc_byte = enc_byte ^ ord(key[i%len(key)])
+    coduri.append(enc_byte)
+    i += 1
 input.close()
-for i in range(len(coduri)):
-    coduri[i]=coduri[i]^ord(key[i%len(key)])
 output=open(fisierout, 'w+b')
 coduri=bytearray(coduri)
 output.write(coduri)

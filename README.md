@@ -1,13 +1,13 @@
 # Proiect ASC 0x01
 
-## Partea 0x00 - Encrypt & Decrypt the input
+## Partea 0x00 
 
 Comenzile pt executarea scripturilor de criptare si decriptare au aceeasi forma ca in enuntul proiectului:
  - python3 encrypt.py ```<parola>``` input.txt output
  - python3 decrypt.py output ```<parola>``` input_recuperat.txt
  
 
-## Partea 0x01 - Hack the Other Team
+## Partea 0x01
 
 - Echipa noastra este BitFlip
 
